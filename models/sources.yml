@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: grai_bigquery_demo
+    tables:
+      - name: raw_customers
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: raw_orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: status
+            tests:
+              - accepted_values:
+                  values:
+                    [
+                      "placed",
+                      "shipped",
+                      "completed",
+                      "return_pending",
+                      "returned",
+                    ]
+
+      - name: raw_payments
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: payment_method
+            tests:
+              - accepted_values:
+                  values:
+                    ["credit_card", "coupon", "bank_transfer", "gift_card"]
+          - name: amount
+            tests:
+              - not_null

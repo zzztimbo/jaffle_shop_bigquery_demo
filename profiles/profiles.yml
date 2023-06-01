@@ -1,0 +1,12 @@
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      host: localhost
+      user: docker
+      password: docker
+      port: 5433
+      dbname: docker
+      schema: dbt_alice
+      threads: 4
