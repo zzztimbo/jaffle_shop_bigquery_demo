@@ -11,6 +11,7 @@ jobs:
           namespace: "prod"
           workspace: "db348917-0de3-473c-aaf8-821bfac61acb" 
           client-host: "api.grai.io"
+          client-port: 443
           api-key: "VOOUtFVU.E6NIxTSPXmFOmMJWq2Oxtnlah0Wm5cn1"
           grai-frontend-host: "https://app.grai.io"
           db-host: sample-database.cudyk77thtpt.us-west-2.rds.amazonaws.com
