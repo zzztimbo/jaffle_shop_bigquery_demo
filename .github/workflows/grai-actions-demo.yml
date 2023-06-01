@@ -9,9 +9,9 @@ jobs:
         uses: grai-io/grai-actions/postgres@master
         with:
           namespace: "prod"
-          workspace: ${{ secrets.GRAI_WORKSPACE_UUID }} 
+          workspace: ${{ secrets.GRAI_WORKSPACE_UUID }}
           client-host: "api.grai.io"
-          api-key: ${{ secrets.GRAI_API_KEY }}}
+          api-key: ${{ secrets.GRAI_API_KEY }}
           grai-frontend-host: "https://app.grai.io"
           db-host: sample-database.cudyk77thtpt.us-west-2.rds.amazonaws.com
           db-user: postgres
