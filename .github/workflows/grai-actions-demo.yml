@@ -1,0 +1,19 @@
+on: [pull_request]
+ 
+jobs:
+  test:
+    name: Evaluate Postgres Changes
+    runs-on: ubuntu-latest
+    steps:
+      - name: data lineage check
+        uses: grai-io/grai-actions/postgres@master
+        with:
+          namespace: "prod"
+          workspace: ${{ secrets.GRAI_WORKSPACE_UUID }} 
+          client-host: "api.grai.io"
+          api-key: ${{ secrets.GRAI_API_KEY }}}
+          grai-frontend-host: "https://app.grai.io"
+          db-host: sample-database.cudyk77thtpt.us-west-2.rds.amazonaws.com
+          db-user: postgres
+          db-password: jnicGnmRdXclhURSRr86
+          db-database-name: jaffle_shop_dev
