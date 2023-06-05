@@ -1,9 +1,13 @@
 on: [pull_request]
- 
+
 jobs:
   test:
     name: Evaluate Postgres Changes
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+      contents: write
     steps:
       - name: data lineage check
         uses: grai-io/grai-actions/postgres@master
@@ -11,7 +15,7 @@ jobs:
           namespace: "prod"
           workspace: "db348917-0de3-473c-aaf8-821bfac61acb" 
           action: tests
-          api-key: "VOUtFVU.E6NIxTSPXmFOmMJWq2Oxtnlah0Wm5cn1"
+          api-key: "ByPx4y0o.lskGnnVMCaHlSZbXOU6aIeYZeO6PsGqZ"
           grai-api-url: "https://api.grai.io"
           grai-app-url: "https://app.grai.io"
           db-host: sample-database.cudyk77thtpt.us-west-2.rds.amazonaws.com
