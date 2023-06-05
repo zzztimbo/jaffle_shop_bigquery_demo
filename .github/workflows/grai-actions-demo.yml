@@ -1,12 +1,12 @@
 on: [pull_request]
 
-permissions:
-  issues: write
 
 jobs:
   test:
     name: Evaluate Postgres Changes
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: data lineage check
         uses: grai-io/grai-actions/postgres@master
