@@ -4,9 +4,6 @@ jobs:
   test:
     name: Evaluate Postgres Changes
     runs-on: ubuntu-latest
-    # permissions:
-      # pull-requests: write
-      # contents: write
     steps:
       - name: data lineage check
         uses: grai-io/grai-actions/postgres@master
