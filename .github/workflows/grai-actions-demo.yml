@@ -5,7 +5,7 @@ jobs:
     name: Evaluate Postgres Changes
     runs-on: ubuntu-latest
     permissions:
-      issues: write
+      # issues: write
       pull-requests: write
       contents: write
     steps:
